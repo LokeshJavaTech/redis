@@ -17,9 +17,15 @@ public class DbConnectionService {
         return dbConnectionRepository.save(dbConnection);
     }
 
-    public List<DbConnection> getByName(String name) {
-        return dbConnectionRepository.getByName(name)
-                .orElse(null);
+    public DbConnection getById(Long id) {
+        return dbConnectionRepository.getById(id);
     }
 
+    public List<DbConnection> getAll() {
+        return dbConnectionRepository.findAll();
+    }
+
+    public void deleteById(Long id) {
+        dbConnectionRepository.deleteById(id);
+    }
 }
