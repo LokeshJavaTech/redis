@@ -23,7 +23,7 @@ public class DbConnectionController {
     @GetMapping("/{name}")
     public DbConnectionWrapper getByName(@PathVariable("name") String name) {
         return DbConnectionWrapper.builder()
-                .dbConnection(dbConnectionService.getByName(name))
+                .dbConnections(dbConnectionService.getByName(name))
                 .build();
     }
 

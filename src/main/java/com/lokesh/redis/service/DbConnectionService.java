@@ -5,6 +5,8 @@ import com.lokesh.redis.repository.DbConnectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class DbConnectionService {
 
@@ -15,7 +17,7 @@ public class DbConnectionService {
         return dbConnectionRepository.save(dbConnection);
     }
 
-    public DbConnection getByName(String name) {
+    public List<DbConnection> getByName(String name) {
         return dbConnectionRepository.getByName(name)
                 .orElse(null);
     }
