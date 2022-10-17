@@ -36,6 +36,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!--
+			Due to this, our spring application will connect with centralized redis server,
+			and it will work in case we have multiple instances of our spring application
+		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>

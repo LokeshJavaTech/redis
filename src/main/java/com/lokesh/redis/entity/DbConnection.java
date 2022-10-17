@@ -8,13 +8,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "db_connection")
-public class DbConnection {
+public class DbConnection implements Serializable {
     @Id
     @GeneratedValue
     private Long id;

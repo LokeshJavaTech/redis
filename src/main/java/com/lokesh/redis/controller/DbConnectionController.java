@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.web.bind.annotation.*;
 
+@EnableCaching
 @RestController
 @RequestMapping("/dbConnection")
-@EnableCaching
 public class DbConnectionController {
 
     @Autowired
